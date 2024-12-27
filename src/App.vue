@@ -53,6 +53,7 @@ function addTask(){
 
 <template>
   <header>
+    <h1>Welcome to my first WebApp</h1>
   <h1>Just Do It.</h1>
   <div>
     <input type="text" v-model="newTaskTitle" />
