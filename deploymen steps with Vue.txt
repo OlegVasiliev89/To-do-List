@@ -1,0 +1,26 @@
+1. npm create vue@latest
+2. cd "project name"
+3. npm run dev
+4. (make code changes)
+(to synchronise)
+5. npm run build
+6. firebase deploy
+
+For a new Project..
+1. npm create vue@latest
+2. cd "project name"
+3. npm run dev
+4. (make code changes)
+5. setup google firebase
+-- go to firebase.google.com
+-- sign  in
+-- create new project
+npm install -g firebase-tools
+firebase login
+firebase init
+-- create the firebase.json file with
+"hosting": {
+  "public": "dist" 
+}
+5. npm run build
+6. firebase deploy

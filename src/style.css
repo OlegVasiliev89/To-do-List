@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+ --bg-color: #24273d;;
+ --secondary-color:#161723;
+ --white-color:  hsl(0, 0%, 100%);;
+ --active-color: #fd7d7d;
+ --completed-color: #8bff8b;
+}
+
+* {
+    font-family: "Josefin Sans";
+}
+
+body{
+
+
+   background: linear-gradient(to right, hsl(235, 24%, 19%), #161723); 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+  header h1{
+
+    font-weight: 900;
+    text-align: center;
+    background-color: var(--bg-color);
+    width: 500px;;
+    color:white;
+    border-radius: 8px;
+    font-size:24px;
+    padding-top:8px;
+    padding-bottom: 8px;
+  }
+  
+  header input {
+    font-weight: 500;
+    background-color: var(--bg-color);
+    color:var(--white-color);
+    border:none;
+    width:400px;
+    height: 32px;
+    outline: none;
+    text-indent: 12px;
+    border-radius:  8px 0  0px 8px ;
+
+  }
+
+
+  
+  header button{
+    width:100px;
+    border:none;
+    height: 34px;
+    
+    font-weight: 600;
+    background-color: #761c78;
+    color:white;
+    border-radius: 0 8px 8px 0px;
+    cursor: pointer
+  }
+
+  header button:hover{
+    transition:0.2s ease-in;
+    background-color: #511352;
+  }
+
+
+
+  main ul {
+    border:1px solid #e6d7ed;
+    padding-bottom:12px;
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+ main ul li{
+    text-decoration: none;;
+    list-style-type:none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 50px;
+    border-radius: 8px;
+    margin-top:12px;
+    
+    padding-left: 12px;;
+    padding-right: 12px;
+    color:#e6d7ed;
+ }
+
+
+ main ul li button:hover{
+    transition:0.3s ease-in;    
+    scale:1.08;
+ }
+ 
+ main ul li{
+     background-color: #24273d;
+ }
+
+
+ main ul + ul, main div + ul {
+  border:1px solid var(--completed-color);
+ }
+ main ul + ul:last-child li,  main div + ul:last-child li{
+  color: var(--completed-color);
+}
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:5px;
+}
+main button {
+    border:none;
+    background-color: #161723;
+    padding:12px;
+    margin-right: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+main button:first-child:hover i{
+   transition: 0.2s ease-in-out;
+   color:var(--completed-color);
+}
+
+main button:last-child:hover i{
+    transition: 0.2s ease-in-out;
+    color:red;
+ }
+ 
+main button i {
+    
+    color: white;
+}
+
+main > div {
+    font-size: 24px;
+    margin-top:12px;
+    font-weight: 900;
+    color:var(--completed-color);
+}
+
+main > ul > li > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+@keyframes fade{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  li{
+    animation: fade 0.3s linear;
+  }
+
+
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    box-shadow: 0 0 5px var(--secondary-color);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Shiny effect on hover */
+input[type="checkbox"]:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Checked state */
+input[type="checkbox"]:checked {
+    background-color: #761c78;
+}
+
+/* Checked state with pseudo-element for a tick */
+input[type="checkbox"]:checked::after {
+    content: '\2713';
+    display: block;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+}
