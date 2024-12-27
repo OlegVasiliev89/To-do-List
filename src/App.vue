@@ -16,11 +16,6 @@ const tasks = ref([
     title: "Go Shopping",
     status: "ACTIVE",
   }, 
-  {
-    id: 4,
-    title: "Read One Hour",
-    status: "COMPLETED",
-  },
 ]) 
 
 const newTaskTitle = ref('');
